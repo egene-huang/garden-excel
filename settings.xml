@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+     	<localRepository>
+            /Users/eugene/repository/M2/github
+        </localRepository>
+    <!--<localRepository>E:\maven_sth\M2\discount-monitor-web</localRepository>-->
+
+    <servers>
+        <server>
+            <id>jd-releases</id>
+            <username>huangyijun6</username>
+            <password>hyj&amp;GD0423-fifth</password>
+        </server>
+        <server>
+            <id>jd-snapshot</id>
+            <username>huangyijun6</username>
+            <password>hyj&amp;GD0423-fifth</password>
+        </server>
+        <server>
+            <id>snapshots-local</id>
+            <username>huangyijun6</username>
+            <password>hyj&amp;GD0423-fifth</password>
+        </server>
+    </servers>
+
+
+    <profiles>
+        <profile>
+            <id>jd-repository</id>
+            <repositories>
+                <repository>
+                    <id>central</id>
+                    <name>libs-releases</name>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <url>http://artifactory.jd.com/libs-releases</url>
+                </repository>
+                <repository>
+                    <id>snapshots</id>
+                    <name>libs-snapshots</name>
+                    <snapshots/>
+                    <url>http://artifactory.jd.com/libs-snapshots</url>
+                </repository>
+                <repository>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <id>snapshots-local</id>
+                    <name>libs-snapshots-local</name>
+                    <url>http://artifactory.jd.com/libs-snapshots-local</url>
+                </repository>
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>central</id>
+                    <name>plugins-releases</name>
+                    <snapshots>
+                        <enabled>false</enabled>
+                    </snapshots>
+                    <url>http://artifactory.jd.com/plugins-releases</url>
+                </pluginRepository>
+                <pluginRepository>
+                    <id>snapshots</id>
+                    <name>plugins-snapshots</name>
+                    <snapshots/>
+                    <url>http://artifactory.jd.com/plugins-snapshots</url>
+                </pluginRepository>
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <activeProfiles>
+        <activeProfile>jd-repository</activeProfile>
+    </activeProfiles>
+
+</settings>
